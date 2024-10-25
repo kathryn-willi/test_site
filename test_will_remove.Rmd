@@ -5,16 +5,9 @@ output: html_document
 
 ```{r setup, include=FALSE}
 # Define the list of images
-images <- c("docs/BRCA_Deep_Dive/Figs/Figure_10.jpg", "docs/BRCA_Deep_Dive/Figs/Figure_11.jpg",
-            "docs/BRCA_Deep_Dive/Figs/Figure_12.jpg", "docs/BRCA_Deep_Dive/Figs/Figure_14.jpg",
-            "docs/BRCA_Deep_Dive/Figs/Figure_3.jpg", "docs/BRCA_Deep_Dive/Figs/Figure_4.jpg",
-            "docs/BRCA_Deep_Dive/Figs/Figure_5.jpg", "docs/BRCA_Deep_Dive/Figs/Figure_6.jpg",
-            "docs/BRCA_Deep_Dive/Figs/Figure_7.jpg", "docs/BRCA_Deep_Dive/Figs/Figure_8.jpg",
-            "docs/BRCA_Deep_Dive/Figs/Figure_9.jpg", "docs/BRCA_Deep_Dive/Figs/Figure_A1.jpg",
-            "docs/BRCA_Deep_Dive/Figs/Figure_A2.jpg", "docs/BRCA_Deep_Dive/Figs/Figure_A3.jpg")
-# Loop through images to generate a code chunk for each with caption
+images <- list.files("figs/", full.names = TRUE)# Loop through images to generate a code chunk for each with caption
 for (img_path in images) {
-  img_name <- gsub("docs/BRCA_Deep_Dive/Figs/", "", img_path)  # Extract filename for caption
+  img_name <- gsub("figs/", "", img_path)  # Extract filename for caption
   
   # Add the caption as a Markdown heading and then print the code chunk
   cat("###", img_name, "\n\n")  # Add figure name as caption
@@ -25,86 +18,86 @@ for (img_path in images) {
 }
 ```
 
-### Figure_10.jpg 
+### /Figure_10.jpg 
 
-```{r Figure_10.jpg, echo=FALSE}
-knitr::include_graphics('docs/BRCA_Deep_Dive/Figs/Figure_10.jpg')
+```{r /Figure_10.jpg, echo=FALSE}
+knitr::include_graphics('figs//Figure_10.jpg')
 ```
 
-### Figure_11.jpg 
+### /Figure_11.jpg 
 
-```{r Figure_11.jpg, echo=FALSE}
-knitr::include_graphics('docs/BRCA_Deep_Dive/Figs/Figure_11.jpg')
+```{r /Figure_11.jpg, echo=FALSE}
+knitr::include_graphics('figs//Figure_11.jpg')
 ```
 
-### Figure_12.jpg 
+### /Figure_12.jpg 
 
-```{r Figure_12.jpg, echo=FALSE}
-knitr::include_graphics('docs/BRCA_Deep_Dive/Figs/Figure_12.jpg')
+```{r /Figure_12.jpg, echo=FALSE}
+knitr::include_graphics('figs//Figure_12.jpg')
 ```
 
-### Figure_14.jpg 
+### /Figure_14.jpg 
 
-```{r Figure_14.jpg, echo=FALSE}
-knitr::include_graphics('docs/BRCA_Deep_Dive/Figs/Figure_14.jpg')
+```{r /Figure_14.jpg, echo=FALSE}
+knitr::include_graphics('figs//Figure_14.jpg')
 ```
 
-### Figure_3.jpg 
+### /Figure_3.jpg 
 
-```{r Figure_3.jpg, echo=FALSE}
-knitr::include_graphics('docs/BRCA_Deep_Dive/Figs/Figure_3.jpg')
+```{r /Figure_3.jpg, echo=FALSE}
+knitr::include_graphics('figs//Figure_3.jpg')
 ```
 
-### Figure_4.jpg 
+### /Figure_4.jpg 
 
-```{r Figure_4.jpg, echo=FALSE}
-knitr::include_graphics('docs/BRCA_Deep_Dive/Figs/Figure_4.jpg')
+```{r /Figure_4.jpg, echo=FALSE}
+knitr::include_graphics('figs//Figure_4.jpg')
 ```
 
-### Figure_5.jpg 
+### /Figure_5.jpg 
 
-```{r Figure_5.jpg, echo=FALSE}
-knitr::include_graphics('docs/BRCA_Deep_Dive/Figs/Figure_5.jpg')
+```{r /Figure_5.jpg, echo=FALSE}
+knitr::include_graphics('figs//Figure_5.jpg')
 ```
 
-### Figure_6.jpg 
+### /Figure_6.jpg 
 
-```{r Figure_6.jpg, echo=FALSE}
-knitr::include_graphics('docs/BRCA_Deep_Dive/Figs/Figure_6.jpg')
+```{r /Figure_6.jpg, echo=FALSE}
+knitr::include_graphics('figs//Figure_6.jpg')
 ```
 
-### Figure_7.jpg 
+### /Figure_7.jpg 
 
-```{r Figure_7.jpg, echo=FALSE}
-knitr::include_graphics('docs/BRCA_Deep_Dive/Figs/Figure_7.jpg')
+```{r /Figure_7.jpg, echo=FALSE}
+knitr::include_graphics('figs//Figure_7.jpg')
 ```
 
-### Figure_8.jpg 
+### /Figure_8.jpg 
 
-```{r Figure_8.jpg, echo=FALSE}
-knitr::include_graphics('docs/BRCA_Deep_Dive/Figs/Figure_8.jpg')
+```{r /Figure_8.jpg, echo=FALSE}
+knitr::include_graphics('figs//Figure_8.jpg')
 ```
 
-### Figure_9.jpg 
+### /Figure_9.jpg 
 
-```{r Figure_9.jpg, echo=FALSE}
-knitr::include_graphics('docs/BRCA_Deep_Dive/Figs/Figure_9.jpg')
+```{r /Figure_9.jpg, echo=FALSE}
+knitr::include_graphics('figs//Figure_9.jpg')
 ```
 
-### Figure_A1.jpg 
+### /Figure_A1.jpg 
 
-```{r Figure_A1.jpg, echo=FALSE}
-knitr::include_graphics('docs/BRCA_Deep_Dive/Figs/Figure_A1.jpg')
+```{r /Figure_A1.jpg, echo=FALSE}
+knitr::include_graphics('figs//Figure_A1.jpg')
 ```
 
-### Figure_A2.jpg 
+### /Figure_A2.jpg 
 
-```{r Figure_A2.jpg, echo=FALSE}
-knitr::include_graphics('docs/BRCA_Deep_Dive/Figs/Figure_A2.jpg')
+```{r /Figure_A2.jpg, echo=FALSE}
+knitr::include_graphics('figs//Figure_A2.jpg')
 ```
 
-### Figure_A3.jpg 
+### /Figure_A3.jpg 
 
-```{r Figure_A3.jpg, echo=FALSE}
-knitr::include_graphics('docs/BRCA_Deep_Dive/Figs/Figure_A3.jpg')
+```{r /Figure_A3.jpg, echo=FALSE}
+knitr::include_graphics('figs//Figure_A3.jpg')
 ```
