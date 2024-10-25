@@ -8,10 +8,10 @@ output: html_document
 images <- list.files("figs/", full.names = TRUE)# Loop through images to generate a code chunk for each with caption
 for (img_path in images) {
   img_name <- gsub("figs/", "", img_path)  # Extract filename for caption
-  
+
   # Add the caption as a Markdown heading and then print the code chunk
   cat("###", img_name, "\n\n")  # Add figure name as caption
-  
+
   cat("```{r ", img_name, ", echo=FALSE}\n",
       "knitr::include_graphics('", img_path, "')\n",
       "```\n\n", sep = "")
@@ -100,4 +100,11 @@ knitr::include_graphics('figs//Figure_A2.jpg')
 
 ```{r /Figure_A3.jpg, echo=FALSE}
 knitr::include_graphics('figs//Figure_A3.jpg')
+```
+
+
+### /Figure_A4.jpg 
+
+```{r /Figure_A4.jpg, echo=FALSE}
+knitr::include_graphics('figs//Figure_A4.jpg')
 ```
